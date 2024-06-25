@@ -36,9 +36,9 @@ jobs:
       - name: Copy files to dist
         run: |
           mkdir -p dist
-          cp -r css/* dist/
-          cp -r fonts/* dist/
-          cp -r images/* dist/
+          cp -r css/* dist/css/
+          cp -r fonts/* dist/fonts/
+          cp -r images/* dist/images/
           cp -r index.html dist/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
