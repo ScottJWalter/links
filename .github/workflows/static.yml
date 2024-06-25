@@ -40,11 +40,15 @@ jobs:
           cp -r fonts/* dist/fonts/
           cp -r images/* dist/images/
           cp -r index.html dist/
+      - name: dist status
+        run: |
+          ls .
+          ls dist
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: './dist/'
+          path: dist
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
